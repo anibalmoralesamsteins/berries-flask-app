@@ -71,12 +71,49 @@ It will also create in the docker directory a tmp folder with the berry_growth_h
    curl http://localhost:5000/allBerryStats
    ```
 
+### Steps to Run using Virtual Environment
+
+1. **Clone the Repository**
+   
+   ```bash
+   git clone https://github.com/anibalmoralesamsteins/berries-flask-app.git
+   cd berries-flask-app
+   ```
+   
+2. **Set Up a Virtual Environment**
+
+   - On macOS/Linux:
+     ```bash
+     python3 -m venv venv
+     source venv/bin/activate
+     ```
+
+   - On Windows:
+     ```bash
+     python -m venv venv
+     .\venv\Scripts\activate
+     ```
+     
+3. **Install Dependencies**
+   
+   ```bash
+   pip install -r requirements.txt
+   ```
+     
+4. **Run the Flask App**
+   
+   ```bash
+   flask run
+   ```
+
+The app should now be running on http://127.0.0.1:5000/.
+
 ## Running Tests
 
 The project includes unit tests to verify the correct functioning of both the data processing and Flask routes.
 
 ### Steps to Run Tests
 
-1. Ensure all dependencies are set up in the Docker container (see **Installation Using Docker** above).
+1. Ensure all dependencies are set up (**Virtual Environment installation** strongly recommended).
 2. Run the tests by executing the following command:
    python -m unittest test_app.py
