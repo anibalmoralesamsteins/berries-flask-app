@@ -1,5 +1,5 @@
 from flask import Flask, Response
-from api_client import fetch_all_berries_concurrently
+from api_client import fetch_all_berries
 from data_processor import process_berry_data
 from dotenv import load_dotenv
 import os
@@ -25,8 +25,8 @@ def all_berry_stats():
         if not poke_api_url:
             return "POKE_API_URL environment variable is not set", 500
         
-        # Fetch the berry data concurrently
-        results = fetch_all_berries_concurrently(poke_api_url)
+        # Fetch the berry data
+        results = fetch_all_berries(poke_api_url)
         
         # Process the data
         res.response = process_berry_data(results)
