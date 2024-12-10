@@ -54,6 +54,7 @@ It will also create in the docker directory a tmp folder with the berry_growth_h
      ```bash
     POKE_API_URL='https://pokeapi.co/api/v2'
     RESPONSE_CONTENT_TYPE='application/json'
+    FETCH_MODE='concurrent'  # Set to 'sequential' for sequential fetching
      ```
 4. **Run the Docker container: Once the image is built, you can run the application in a container with the following command**:
 
